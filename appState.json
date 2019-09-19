@@ -121,15 +121,13 @@
           "table": {
             "arn": "",
             "name": "test",
-            "partitionKey": "sample11",
+            "partitionKey": "sample",
             "partitionKeyType": "S",
             "hasSortKey": true,
             "sortKey": "sample",
             "sortKeyType": "S",
-            "payPerRequest": false,
-            "mode": 0,
-            "readCapacityUnits": "1",
-            "writeCapacityUnits": "11"
+            "payPerRequest": true,
+            "mode": 0
           },
           "isGlobalEditMode": true,
           "parameters": {
@@ -179,7 +177,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568891449240
+    "lastSave": 1568891479504
   },
   "VCS_STATE": {
     "provider": "GitHub",
