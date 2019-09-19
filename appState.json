@@ -41,6 +41,17 @@
     ],
     "currentFileId": "e522c957-3bfa-471a-9ef4-67d46682c785",
     "resources": {
+      "kinesisK": {
+        "name": "kinesisK",
+        "type": "Kinesis",
+        "config": {
+          "mode": 0,
+          "StreamName": "K",
+          "shards": 1,
+          "region": "us-east-1",
+          "operation": "describe-stream"
+        }
+      },
       "snsusEast1testhiru": {
         "name": "snsusEast1testhiru",
         "type": "SNS",
@@ -52,16 +63,6 @@
           "snsType": 0,
           "topicDisplayName": "tetst",
           "subscriptions": []
-        }
-      },
-      "kinesisK": {
-        "name": "kinesisK",
-        "type": "Kinesis",
-        "config": {
-          "mode": 0,
-          "StreamName": "K",
-          "shards": 10,
-          "region": "us-east-1"
         }
       }
     },
@@ -98,7 +99,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568893092275
+    "lastSave": 1568893202779
   },
   "VCS_STATE": {
     "provider": "GitHub",
