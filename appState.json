@@ -41,6 +41,13 @@
           {
             "resourceName": "apigusEast1TestAPIMyLambdaput",
             "config": {}
+          },
+          {
+            "resourceName": "ddbBTMenu",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100"
+            }
           }
         ]
       }
@@ -238,6 +245,40 @@
           "stageName": "HH",
           "mode": 1
         }
+      },
+      "ddbBTMenu": {
+        "name": "ddbBTMenu",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 1,
+          "table": {
+            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu",
+            "name": "BTMenu",
+            "partitionKey": "itemCode",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 1,
+            "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu/stream/2019-08-22T10:29:15.010"
+          },
+          "isGlobalEditMode": false,
+          "parameters": {
+            "Key": {},
+            "Item": {},
+            "ExpressionAttributeValues": {}
+          },
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100"
+          },
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
+        }
       }
     },
     "customTemplate": {
@@ -265,7 +306,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568887855217
+    "lastSave": 1568887921937
   },
   "VCS_STATE": {
     "provider": "GitHub",
