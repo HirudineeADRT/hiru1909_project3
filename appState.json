@@ -47,9 +47,8 @@
         "config": {
           "mode": 0,
           "StreamName": "K",
-          "shards": 1,
-          "region": "us-east-1",
-          "operation": "describe-stream"
+          "shards": 10,
+          "region": "us-east-1"
         }
       }
     },
@@ -86,7 +85,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568892649066
+    "lastSave": 1568892698654
   },
   "VCS_STATE": {
     "provider": "GitHub",
