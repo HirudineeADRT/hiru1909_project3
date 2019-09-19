@@ -39,6 +39,10 @@
               "StartingPosition": "TRIM_HORIZON",
               "BatchSize": "100"
             }
+          },
+          {
+            "resourceName": "snsusEast1testhiru",
+            "config": {}
           }
         ]
       }
@@ -72,13 +76,8 @@
           "topicArn": "arn:aws:sns:us-east-1:318300609668:testhiru",
           "topicRegion": "us-east-1",
           "snsType": 0,
-          "topicDisplayName": "tetst",
-          "subscriptions": [
-            {
-              "type": "email",
-              "endpoint": "hiru@gmail.com"
-            }
-          ]
+          "topicDisplayName": "",
+          "subscriptions": []
         }
       }
     },
@@ -115,7 +114,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568894774857
+    "lastSave": 1568895448360
   },
   "VCS_STATE": {
     "provider": "GitHub",
