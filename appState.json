@@ -29,7 +29,8 @@
           "timeout": 60,
           "memory": 128,
           "layers": [],
-          "triggerType": "PreTokenGeneration"
+          "triggerType": "PreTokenGeneration",
+          "BatchSize": "187"
         },
         "triggers": [
           {
@@ -45,8 +46,8 @@
           {
             "resourceName": "ddbBTMenu",
             "config": {
-              "StartingPosition": "LATEST",
-              "BatchSize": "2"
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "187"
             }
           }
         ]
@@ -300,8 +301,8 @@
             "TableName": "BTMenu"
           },
           "triggerParams": {
-            "StartingPosition": "LATEST",
-            "BatchSize": "2"
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "187"
           },
           "validator": {
             "validatableFields": {},
@@ -336,7 +337,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568888252912
+    "lastSave": 1568888330878
   },
   "VCS_STATE": {
     "provider": "GitHub",
