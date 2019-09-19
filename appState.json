@@ -39,6 +39,14 @@
               "StartingPosition": "TRIM_HORIZON",
               "BatchSize": "187"
             }
+          },
+          {
+            "resourceName": "ddbtest",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100",
+              "StreamViewType": "NEW_IMAGE"
+            }
           }
         ]
       }
@@ -112,6 +120,40 @@
           },
           "valid": true
         }
+      },
+      "ddbtest": {
+        "name": "ddbtest",
+        "type": "DynamoDB",
+        "config": {
+          "mode": 0,
+          "table": {
+            "arn": "",
+            "name": "test",
+            "partitionKey": "sample",
+            "partitionKeyType": "S",
+            "hasSortKey": false,
+            "sortKey": "",
+            "sortKeyType": "S",
+            "payPerRequest": true,
+            "mode": 0
+          },
+          "isGlobalEditMode": false,
+          "parameters": {
+            "Key": {},
+            "Item": {},
+            "ExpressionAttributeValues": {}
+          },
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100",
+            "StreamViewType": "NEW_IMAGE"
+          },
+          "validator": {
+            "validatableFields": {},
+            "validity": true
+          },
+          "valid": true
+        }
       }
     },
     "customTemplate": {
@@ -139,7 +181,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568890646220
+    "lastSave": 1568890790133
   },
   "VCS_STATE": {
     "provider": "GitHub",
