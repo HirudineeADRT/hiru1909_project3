@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\n\nexports.handler = function (event, context, callback) {\n    ddb.scan({\n        TableName: 'test'\n    }).promise()\n        .then((data) => {\n            //your logic goes here\n        })\n        .catch((err) => {\n            //handle error\n        });\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -123,23 +123,19 @@
             "name": "test",
             "partitionKey": "sample",
             "partitionKeyType": "S",
-            "hasSortKey": false,
-            "sortKey": "",
+            "hasSortKey": true,
+            "sortKey": "sample",
             "sortKeyType": "S",
             "payPerRequest": true,
             "mode": 0
           },
-          "isGlobalEditMode": false,
+          "isGlobalEditMode": true,
           "parameters": {
             "Key": {},
             "Item": {},
             "ExpressionAttributeValues": {}
           },
-          "triggerParams": {
-            "StartingPosition": "TRIM_HORIZON",
-            "BatchSize": "100",
-            "StreamViewType": "NEW_IMAGE"
-          },
+          "triggerParams": {},
           "validator": {
             "validatableFields": {},
             "validity": true
@@ -163,7 +159,15 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {}
+      "dependencies": {
+        "aws-sdk": {
+          "name": "aws-sdk",
+          "language": "javascript",
+          "version": "2.176.0",
+          "dev": true,
+          "notRemovable": false
+        }
+      }
     }
   },
   "PROJECT_META": {
@@ -173,7 +177,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568890856755
+    "lastSave": 1568890975975
   },
   "VCS_STATE": {
     "provider": "GitHub",
