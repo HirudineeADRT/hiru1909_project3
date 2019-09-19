@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -30,14 +30,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "cognitohirupool",
-            "config": {
-              "triggerType": "CreateAuthChallenge"
-            }
-          }
-        ]
+        "triggers": []
       }
     },
     "rootNode": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
@@ -238,7 +231,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568886144025
+    "lastSave": 1568886573070
   },
   "VCS_STATE": {
     "provider": "GitHub",
