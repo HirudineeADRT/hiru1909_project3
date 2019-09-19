@@ -33,7 +33,7 @@
         },
         "triggers": [
           {
-            "resourceName": "cognitohirupool",
+            "resourceName": "cognitoupdate",
             "config": {
               "triggerType": "PreTokenGeneration"
             }
@@ -47,19 +47,16 @@
     ],
     "currentFileId": "e522c957-3bfa-471a-9ef4-67d46682c785",
     "resources": {
-      "cognitohirupool": {
-        "name": "cognitohirupool",
+      "cognitoupdate": {
+        "name": "cognitoupdate",
         "type": "CognitoIdentityServiceProvider",
         "config": {
           "mode": 0,
-          "name": "hirupool",
-          "arn": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/undefined",
+          "name": "update",
           "userPool": {
-            "Name": "hirupool",
+            "Name": "update",
             "isNew": true,
-            "AutoVerifiedAttributes": [
-              "phone_number"
-            ],
+            "AutoVerifiedAttributes": [],
             "AliasAttributes": [],
             "UsernameAttributes": [],
             "Policies": {
@@ -197,13 +194,6 @@
                 "Mutable": true,
                 "Name": "website",
                 "Required": false
-              },
-              {
-                "Name": "hiru",
-                "AttributeDataType": "String",
-                "DeveloperOnlyAttribute": true,
-                "Required": false,
-                "Mutable": true
               }
             ],
             "AdminCreateUserConfig": {
@@ -240,7 +230,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568886835732
+    "lastSave": 1568886926740
   },
   "VCS_STATE": {
     "provider": "GitHub",
