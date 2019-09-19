@@ -80,11 +80,7 @@
           "subscriptions": [
             {
               "type": "http",
-              "endpoint": "http://gg.com"
-            },
-            {
-              "type": "http",
-              "endpoint": "http://"
+              "endpoint": "http://kkkk.com"
             }
           ]
         }
@@ -123,7 +119,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568895920222
+    "lastSave": 1568896379773
   },
   "VCS_STATE": {
     "provider": "GitHub",
