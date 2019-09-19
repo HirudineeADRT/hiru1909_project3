@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\n\nexports.handler = function (event, context, callback) {\n    ddb.scan({\n        TableName: 'test'\n    }).promise()\n        .then((data) => {\n            //your logic goes here\n        })\n        .catch((err) => {\n            //handle error\n        });\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\n\nexports.handler = function (event, context, callback) {\n    ddb.scan({\n        TableName: 'test'\n    }).promise()\n        .then((data) => {\n            console.log(data);\n        })\n        .catch((err) => {\n            console.log(err);\n        });\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -121,15 +121,13 @@
           "table": {
             "arn": "",
             "name": "test",
-            "partitionKey": "sample11",
+            "partitionKey": "sample",
             "partitionKeyType": "S",
             "hasSortKey": true,
             "sortKey": "sample",
             "sortKeyType": "S",
-            "payPerRequest": false,
-            "mode": 0,
-            "readCapacityUnits": "1",
-            "writeCapacityUnits": "11"
+            "payPerRequest": true,
+            "mode": 0
           },
           "isGlobalEditMode": true,
           "parameters": {
@@ -179,7 +177,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568892093074
+    "lastSave": 1568892352754
   },
   "VCS_STATE": {
     "provider": "GitHub",

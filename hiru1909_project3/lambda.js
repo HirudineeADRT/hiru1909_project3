@@ -6,10 +6,10 @@ exports.handler = function (event, context, callback) {
         TableName: 'test'
     }).promise()
         .then((data) => {
-            //your logic goes here
+            console.log(data);
         })
         .catch((err) => {
-            //handle error
+            console.log(err);
         });
 
     callback(null, { "message": "Successfully executeqqd" });
