@@ -39,14 +39,6 @@
               "StartingPosition": "TRIM_HORIZON",
               "BatchSize": "187"
             }
-          },
-          {
-            "resourceName": "ddbtest",
-            "config": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100",
-              "StreamViewType": "NEW_IMAGE"
-            }
           }
         ]
       }
@@ -181,7 +173,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568890790133
+    "lastSave": 1568890856755
   },
   "VCS_STATE": {
     "provider": "GitHub",
