@@ -30,7 +30,14 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "cognitohirupool",
+            "config": {
+              "triggerType": "DefineAuthChallenge"
+            }
+          }
+        ]
       }
     },
     "rootNode": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
@@ -45,6 +52,7 @@
         "config": {
           "mode": 0,
           "name": "hirupool",
+          "arn": "arn:aws:cognito-idp:us-east-1:318300609668:userpool/undefined",
           "userPool": {
             "Name": "hirupool",
             "isNew": true,
@@ -231,7 +239,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568886573070
+    "lastSave": 1568886707292
   },
   "VCS_STATE": {
     "provider": "GitHub",
