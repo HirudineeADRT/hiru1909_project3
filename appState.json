@@ -77,7 +77,16 @@
           "topicRegion": "us-east-1",
           "snsType": 0,
           "topicDisplayName": "",
-          "subscriptions": []
+          "subscriptions": [
+            {
+              "type": "http",
+              "endpoint": "http://gg.com"
+            },
+            {
+              "type": "http",
+              "endpoint": "http://"
+            }
+          ]
         }
       }
     },
@@ -114,7 +123,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568895698703
+    "lastSave": 1568895920222
   },
   "VCS_STATE": {
     "provider": "GitHub",
