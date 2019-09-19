@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst ddb = new AWS.DynamoDB.DocumentClient();\n\nexports.handler = function (event, context, callback) {\n    ddb.scan({\n        TableName: 'test'\n    }).promise()\n        .then((data) => {\n            console.log(data);\n        })\n        .catch((err) => {\n            console.log(err);\n        });\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "exports.handler = function (event, context, callback) {\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -32,15 +32,7 @@
           "triggerType": "PreTokenGeneration",
           "BatchSize": "187"
         },
-        "triggers": [
-          {
-            "resourceName": "ddbBTMenu",
-            "config": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "187"
-            }
-          }
-        ]
+        "triggers": []
       }
     },
     "rootNode": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
@@ -48,102 +40,7 @@
       "e522c957-3bfa-471a-9ef4-67d46682c785"
     ],
     "currentFileId": "e522c957-3bfa-471a-9ef4-67d46682c785",
-    "resources": {
-      "ddbBTMenu": {
-        "name": "ddbBTMenu",
-        "type": "DynamoDB",
-        "config": {
-          "mode": 1,
-          "table": {
-            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu",
-            "name": "BTMenu",
-            "partitionKey": "itemCode",
-            "partitionKeyType": "S",
-            "hasSortKey": false,
-            "sortKey": "",
-            "sortKeyType": "S",
-            "payPerRequest": true,
-            "mode": 1,
-            "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu/stream/2019-08-22T10:29:15.010"
-          },
-          "isGlobalEditMode": false,
-          "parameters": {
-            "mode": 1,
-            "table": {
-              "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu",
-              "name": "BTMenu",
-              "partitionKey": "itemCode",
-              "partitionKeyType": "S",
-              "hasSortKey": false,
-              "sortKey": "",
-              "sortKeyType": "S",
-              "payPerRequest": true,
-              "mode": 1,
-              "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu/stream/2019-08-22T10:29:15.010"
-            },
-            "isGlobalEditMode": false,
-            "parameters": {
-              "Key": {},
-              "Item": {},
-              "ExpressionAttributeValues": {}
-            },
-            "triggerParams": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100"
-            },
-            "validator": {
-              "validatableFields": {},
-              "validity": true
-            },
-            "valid": true,
-            "triggerConfig": {
-              "StartingPosition": "TRIM_HORIZON",
-              "BatchSize": "100"
-            },
-            "TableName": "BTMenu"
-          },
-          "triggerParams": {
-            "StartingPosition": "TRIM_HORIZON",
-            "BatchSize": "187"
-          },
-          "validator": {
-            "validatableFields": {},
-            "validity": true
-          },
-          "valid": true
-        }
-      },
-      "ddbtest": {
-        "name": "ddbtest",
-        "type": "DynamoDB",
-        "config": {
-          "mode": 0,
-          "table": {
-            "arn": "",
-            "name": "test",
-            "partitionKey": "sample",
-            "partitionKeyType": "S",
-            "hasSortKey": true,
-            "sortKey": "sample",
-            "sortKeyType": "S",
-            "payPerRequest": true,
-            "mode": 0
-          },
-          "isGlobalEditMode": true,
-          "parameters": {
-            "Key": {},
-            "Item": {},
-            "ExpressionAttributeValues": {}
-          },
-          "triggerParams": {},
-          "validator": {
-            "validatableFields": {},
-            "validity": true
-          },
-          "valid": true
-        }
-      }
-    },
+    "resources": {},
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -177,7 +74,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568892352754
+    "lastSave": 1568892461528
   },
   "VCS_STATE": {
     "provider": "GitHub",
