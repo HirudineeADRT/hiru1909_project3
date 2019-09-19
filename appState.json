@@ -32,7 +32,15 @@
           "triggerType": "PreTokenGeneration",
           "BatchSize": "187"
         },
-        "triggers": []
+        "triggers": [
+          {
+            "resourceName": "kinesisK",
+            "config": {
+              "StartingPosition": "TRIM_HORIZON",
+              "BatchSize": "100"
+            }
+          }
+        ]
       }
     },
     "rootNode": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
@@ -48,7 +56,11 @@
           "mode": 0,
           "StreamName": "K",
           "shards": 10,
-          "region": "us-east-1"
+          "region": "us-east-1",
+          "triggerParams": {
+            "StartingPosition": "TRIM_HORIZON",
+            "BatchSize": "100"
+          }
         }
       },
       "snsusEast1testhiru": {
@@ -103,7 +115,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568894448861
+    "lastSave": 1568894774857
   },
   "VCS_STATE": {
     "provider": "GitHub",
