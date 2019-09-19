@@ -62,7 +62,12 @@
           "topicRegion": "us-east-1",
           "snsType": 0,
           "topicDisplayName": "tetst",
-          "subscriptions": []
+          "subscriptions": [
+            {
+              "type": "http",
+              "endpoint": "http://k.com"
+            }
+          ]
         }
       }
     },
@@ -99,7 +104,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568893202779
+    "lastSave": 1568893473867
   },
   "VCS_STATE": {
     "provider": "GitHub",
