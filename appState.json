@@ -1,0 +1,76 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "7c8a66e4-6427-4f3a-bab5-756231dcc458": {
+        "id": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
+        "parent": null,
+        "name": "hiru1909_project3",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "e522c957-3bfa-471a-9ef4-67d46682c785"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru1909_project3"
+      },
+      "e522c957-3bfa-471a-9ef4-67d46682c785": {
+        "id": "e522c957-3bfa-471a-9ef4-67d46682c785",
+        "parent": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru1909_project3/lambda.js",
+        "code": "exports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      }
+    },
+    "rootNode": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
+    "openFiles": [
+      "e522c957-3bfa-471a-9ef4-67d46682c785"
+    ],
+    "currentFileId": "e522c957-3bfa-471a-9ef4-67d46682c785",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": null
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {}
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru1909_project3",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1568878435328
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru1909_project3",
+      "url": "https://github.com/HirudineeADRT/hiru1909_project3"
+    }
+  }
+}
