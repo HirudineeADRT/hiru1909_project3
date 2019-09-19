@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst kinesis = new AWS.Kinesis();\n\nexports.handler = function (event, context, callback) {\n    kinesis.describeStream({\n        StreamName: 'K'\n    }).promise()\n        .then(data => {\n            // your logic goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\nconst kinesis = new AWS.Kinesis();\n\nexports.handler = function (event, context, callback) {\n    kinesis.describeStream({\n        StreamName: 'K'\n    }).promise()\n        .then(data => {\n            // your logic goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    sns.getTopicAttributes({\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:testhiru'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -41,15 +41,27 @@
     ],
     "currentFileId": "e522c957-3bfa-471a-9ef4-67d46682c785",
     "resources": {
+      "snsusEast1testhiru": {
+        "name": "snsusEast1testhiru",
+        "type": "SNS",
+        "config": {
+          "topicMode": 0,
+          "topicName": "testhiru",
+          "topicArn": "arn:aws:sns:us-east-1:318300609668:testhiru",
+          "topicRegion": "us-east-1",
+          "snsType": 0,
+          "topicDisplayName": "tetst",
+          "subscriptions": []
+        }
+      },
       "kinesisK": {
         "name": "kinesisK",
         "type": "Kinesis",
         "config": {
           "mode": 0,
           "StreamName": "K",
-          "shards": 1,
-          "region": "us-east-1",
-          "operation": "describe-stream"
+          "shards": 10,
+          "region": "us-east-1"
         }
       }
     },
@@ -86,7 +98,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568892714605
+    "lastSave": 1568893092275
   },
   "VCS_STATE": {
     "provider": "GitHub",
