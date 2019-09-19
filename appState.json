@@ -47,9 +47,8 @@
         "config": {
           "mode": 0,
           "StreamName": "K",
-          "shards": 1,
-          "region": "us-east-1",
-          "operation": "describe-stream"
+          "shards": 10,
+          "region": "us-east-1"
         }
       },
       "snsusEast1testhiru": {
@@ -64,8 +63,8 @@
           "topicDisplayName": "tetst",
           "subscriptions": [
             {
-              "type": "http",
-              "endpoint": "http://k.com"
+              "type": "email",
+              "endpoint": "hiru@gmail.com"
             }
           ]
         }
@@ -104,7 +103,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568893473867
+    "lastSave": 1568893559151
   },
   "VCS_STATE": {
     "provider": "GitHub",
