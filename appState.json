@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\nconst kinesis = new AWS.Kinesis();\n\nexports.handler = function (event, context, callback) {\n    kinesis.describeStream({\n        StreamName: 'K'\n    }).promise()\n        .then(data => {\n            // your logic goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n    sns.getTopicAttributes({\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:testhiru'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "let AWS = require('aws-sdk');\nconst sns = new AWS.SNS();\nconst kinesis = new AWS.Kinesis();\n\nexports.handler = function (event, context, callback) {\n    kinesis.describeStream({\n        StreamName: 'K'\n    }).promise()\n        .then(data => {\n            // your logic goes here\n        })\n        .catch(err => {\n            // error handling goes here ///\n        });\n\n    sns.getTopicAttributes({\n        TopicArn: 'arn:aws:sns:us-east-1:318300609668:testhiru'\n    }).promise()\n        .then(data => {\n            // your code goes here\n        })\n        .catch(err => {\n            // error handling goes here\n        });\n\n\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -103,7 +103,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568893559151
+    "lastSave": 1568894448861
   },
   "VCS_STATE": {
     "provider": "GitHub",

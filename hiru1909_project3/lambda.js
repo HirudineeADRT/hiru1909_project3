@@ -10,7 +10,7 @@ exports.handler = function (event, context, callback) {
             // your logic goes here
         })
         .catch(err => {
-            // error handling goes here
+            // error handling goes here ///
         });
 
     sns.getTopicAttributes({
