@@ -22,7 +22,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru1909_project3/lambda.js",
-        "code": "exports.handler = function(event, context, callback) {\n    //change from sigma //ktest\n    // added a new file \n\n\n\n\n    callback(null, { \"message\": \"Successfully executeqqd\" });\n}",
+        "code": "exports.handler = function (event, context, callback) {\n    \n    callback(null, { \"message\": \"Successfully executed\" });\n}",
         "config": {
           "runtime": "nodejs8.10",
           "handler": "handler",
@@ -30,12 +30,7 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [
-          {
-            "resourceName": "apigusEast1TestAPItestqqqget",
-            "config": {}
-          }
-        ]
+        "triggers": []
       }
     },
     "rootNode": "7c8a66e4-6427-4f3a-bab5-756231dcc458",
@@ -43,72 +38,7 @@
       "e522c957-3bfa-471a-9ef4-67d46682c785"
     ],
     "currentFileId": "e522c957-3bfa-471a-9ef4-67d46682c785",
-    "resources": {
-      "ddbBTMenu": {
-        "name": "ddbBTMenu",
-        "type": "DynamoDB",
-        "config": {
-          "mode": 1,
-          "operation": "get",
-          "table": {
-            "arn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu",
-            "name": "BTMenu",
-            "partitionKey": "itemCode",
-            "partitionKeyType": "S",
-            "hasSortKey": false,
-            "sortKey": "",
-            "sortKeyType": "S",
-            "payPerRequest": true,
-            "mode": 1,
-            "streamArn": "arn:aws:dynamodb:us-east-1:318300609668:table/BTMenu/stream/2019-08-22T10:29:15.010"
-          },
-          "isGlobalEditMode": false,
-          "parameters": {
-            "Key": {
-              "itemCode": "@{t}his"
-            },
-            "Item": {},
-            "ExpressionAttributeValues": {}
-          },
-          "triggerParams": {},
-          "validator": {
-            "validatableFields": {},
-            "validity": true
-          },
-          "valid": true
-        }
-      },
-      "apigusEast1TestAPItestqqqget": {
-        "name": "apigusEast1TestAPItestqqqget",
-        "type": "API_GATEWAY",
-        "config": {
-          "selectedRegion": "us-east-1",
-          "apiMode": 1,
-          "apiName": "TestAPI",
-          "apiId": "0itznun7w3",
-          "endpointType": "EDGE",
-          "rootResourceId": "h2lelj6j7k",
-          "existingResources": {
-            "/MyLambda": "98nqbj",
-            "/": "h2lelj6j7k",
-            "/newchange/test": "k6pdhn",
-            "/newchange": "q1ox7l",
-            "/testWithSlash": "q4m4g1",
-            "/testtwospeciallambda": "q4szm3",
-            "/testtwospecialkumutest": "wey3lk"
-          },
-          "resourceMode": 0,
-          "resourceName": "testqqq",
-          "resourcePath": "/testqqq",
-          "restMethod": "GET",
-          "proxyIntegration": false,
-          "enableCORS": false,
-          "stageMode": 0,
-          "stageName": "socks11",
-          "mode": 1
-        }
-      }
-    },
+    "resources": {},
     "customTemplate": {
       "dialect": null,
       "definitions": null
@@ -124,15 +54,7 @@
       }
     ],
     "packageJSON": {
-      "dependencies": {
-        "aws-sdk": {
-          "name": "aws-sdk",
-          "language": "javascript",
-          "version": "2.176.0",
-          "dev": true,
-          "notRemovable": false
-        }
-      }
+      "dependencies": {}
     }
   },
   "PROJECT_META": {
@@ -142,7 +64,7 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1568885450288
+    "lastSave": 1568885917213
   },
   "VCS_STATE": {
     "provider": "GitHub",
